@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title> pseudo.elemento </title>
+    <style>
+        body {
+            margin: 0 auto;
+            width: 85%;
+            background-color: rgb(198, 173, 221);
+            color: black;
+            font-size: arial, sans-serif;
+        }
+        div{
+            background-color: ghostwhite;
+        }
+
+        .tracos::before {
+            content: '---';
+        }
+
+        .antes::before {
+            content: '\2764';
+        }
+
+        .depois::after {
+            content: '\2764';
+        }
+
+        .selecao::selection {
+            color: red;
+            background: rgb(238, 196, 238);
+        }
+
+        .letra::first-letter {
+            color: black;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 1cm;
+        }
+
+        .linha::first-line {
+            color: blue;
+            font-variant: small-caps;
+            font-size: 0, 5cm;
+        }
+
+        a:hover {
+            position: relative;
+        }
+ 
+        a[title]:hover::after {
+            position: absolute;
+            content: attr(title);
+            padding: 5px 10px;
+            width: 130px;
+            left: 0;
+            top: 25px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div><h1>PSEUDO - ELEMENTOS</h1>
+
+        <p> Um pseudo elemento CSS é uma palavra- chave adicionada a um seletor que permite estilizar uma parte
+            específica do (s) elemento (s)
+            selecionado (s). Por exemplo: first-line pode ser usado para alterar a fonte da primeira linha de um
+            parágrafo.<br>
+
+            <br>
+
+            <b>::after</b>= Permite a inserção de conteúdos (texto ou imagem) depois do conteúdo de um elemento;<br>
+            <b>::before</b>= Permite a inserção de conteúdos (texto ou imagem) antes do conteúdo de um elemento;<br>
+            <b>::selection</b>= Permite customizar uma seleção feita pelo usuário;<br>
+            <b>::first-letter</b>= Permite customizar a primeira letra de um elemento;<br>
+            <b>::first-line</b>= Permite customizar a primeira linha do texto de um elemento;<br>
+        </p>
+
+        <hr size="3cm" color="black">
+
+        <p class="tracos">Conteúdo com traços no começo.</p>
+        <p class="antes">Conteúdo com coração antes.</p>
+        <p class="depois">Conteúdo com coração depois.</p>
+        <p class="antes depois">Conteúdo com coração antes e depois.</p>
+        <p class="selecao">Conteúdo com seleção especial.</p>
+        <br>
+        <p class="letra linha">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga similique perspiciatis
+            velit
+            explicabo itaque
+            nisi.<br>
+            Facilis quos enim hic facere dolorum nihil placeat recusandae numquam iure? Distinctio eum adipisci omnis!
+        </p>
+        <a title="Usando pseudo" href="#">Passe o mouse.</a></div>
+    </section>
+</body>
+
+</html>

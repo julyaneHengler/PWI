@@ -1,0 +1,42 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: gold;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 85%;
+    margin: 0 auto;
+}
+
+div{
+    background-color: ghostwhite;
+}
+
+table, th, td, tr{
+    border: 1px solid silver;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+}
+tbody{
+    text-align: center;
+}
+a {
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 100px;
+    padding: 5px 0;
+    text-decoration: none;
+
+}
+a span {
+    display: none;
+}
+a:hover span {
+    display: block; /* Tranforma o SPAN em um elemento do tipo bloco */
+    position: absolute; /* Para você poder posicionar a vontade, sem quebrar o layour em volta */
+    top: 0px; /* Para ficar na mesma altura do link */
+    left: 100%; /* Empurra a imagem para fora do link, ficando a lado do mesmo */
+}

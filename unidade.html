@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br>">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidade Relativa</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #row {
+            width: 80%;
+            height: 20%;
+            display: table;
+            margin: 0 auto;
+        }
+
+        .coluna {
+            width: 22%;
+            height: 50%;
+            float: left;
+            background-color: tomato;
+            border: 1px solid black;
+            margin: 5px;
+        }
+        #dad{
+            font-size: 16px;
+            margin: 1.5em;
+        }
+        .filho{
+            font-size: 1.5em;
+        }
+        #pai-rem{
+            font-size: 1.5rem;
+        }
+        #filho-rem{
+            font-size: 1.5rem;
+        }
+        #neto-rem{
+            font-size: 1.5rem;
+        }
+        #bisneti-rem{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="row">
+        <h2>Elemento Pai</h2>
+
+        <div class="coluna">
+            Coluna 1
+        </div>
+        <div class="coluna">
+            Coluna 2
+        </div>
+        <div class="coluna">
+            Coluna 3
+        </div>
+        <div class="coluna">
+            Coluna 4
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Unidade EM</h2>
+    <div id="dad">
+        div pai 16px
+        <div class="filho">
+            div filho 24px
+            <div class="filho">
+                div filho 36px
+                <div class="filho">
+                    div filho 54px
+                    <div class="filho">
+                        div filho 81px
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="pai-rem">
+        <p>elemento pai</p>
+        <div id="filho-rem">
+            <p>Elemento filho</p>
+            <div id="neto-rem">
+                <p>Elemento neto</p>
+                <div id="bisneto-rem">
+                    <p>Elemento bisneto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

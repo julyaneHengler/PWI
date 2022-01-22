@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/especificidadestyle.css">
+
+    <title>ESPECIFICIDADE</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+
+            <img src="img/logo-removebg-preview.png" alt="logo">
+
+        </h1>
+
+
+    </header>
+    <br>
+
+    <h2>Que tal uma musica pra relaxar?</h2>
+    <audio src="midia/fundo-de-quintal.mp3" controls autoplay></audio>
+    <br>
+    <h2>Menu de acessibilidade toque para ouvir </h2>
+    <audio src="midia/Recording_31.m4a" controls autoplay></audio>
+    <br>
+
+    <h2>Especificidade</h2>
+    <br>
+    <div class="oq"><b>O QUE É?</b></div>
+    <br>
+    <div class="oq">É a maneira que o browser utiliza para aplicar um estilo em um determinado elemento quando duas
+        Classes entram em conflito,
+        por exemplo. A especificação é baseada apenas nas regras imposta na composição de diferentes tipos de seletores.
+    </div><br>
+
+    <br>
+
+    <h2>CALCULOS DAS ESPECIFICIDADES</h2>
+    <div class="calculo">
+        <p>Cada seletor tem um determinado peso e, quando um elemento tem estilos que se conflitam o
+            navegador
+            aplica
+            o estilo que ganha em especificidade, ou seja, o símbolo que tem prioridade acaba sendo o formatado, por
+            ordem de prioridade.</p>
+    </div>
+
+    <br>
+
+
+    <h2> Tipos de seletores</h2>
+    <div class="calculo">
+        <br>
+
+        <li>Seletor universal </li>
+        <li>Seletores de tipo</li>
+        <li>Seletores de classe</li>
+        <li>Seletores de atributo</li>
+        <li>Pseudo-classes</li>
+        <li>Seletores de ID</li>
+        <li>Estilo inline</li>
+    </div>
+
+
+    <br>
+    <h2>VEJA EXEMPLOS NA TABELA A SEGUIR:</h2>
+    <mark><i> OBS:Passe o mouse sobre os exemplos e aguarde dois segundos.</i></mark>
+    <br>
+
+
+    <table>
+        <thead>
+            <tr>
+                <thcolspan="3"><b>Tipos de Seletores</b></th>
+            </tr>
+            <tr>
+                <th>Seletores</th>
+                <th>Exemplos</th>
+                <th>Peso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Seletores Universais</td>
+                <td>
+                    <a href="#">*<span><img src="img/seletor universal.png" alt=" universal"></span></a>
+                </td>
+                <td> Peso mais baixo </td>
+            </tr>
+            <tr>
+                <td>Seletores de tipo</td>
+                <td>
+                    <a href="#">P<span><img src="img/tag p.png" alt="tagP"></span></a>
+                </td>
+                <td> Peso mais baixo </td>
+            </tr>
+            <tr>
+                <td> Seletores de Classes </td>
+                <td>
+                    <a href="#">Class<span><img src="img/class.gif" alt=" class"></span></a>
+                </td>
+                <td> Peso baixo </td>
+            </tr>
+            <tr>
+                <td>Seletores de Atributo</td>
+                <td>
+                    <a href="#">type= number<span><img src="img/atributo.png"></span></a>
+                </td>
+                <td> Peso baixo </td>
+            </tr>
+            <tr>
+                <td>Pseudo-Classes</td>
+                <td>
+                    <a href="#">:hover<span><img src="img/hover.gif"></span></a>
+                </td>
+                <td> Peso baixo </td>
+            </tr>
+            <tr>
+                <td> Seletores de ID </td>
+                <td>
+                    <a href="#">id<span><img src="img/id.gif"></span></a>
+                </td>
+                <td> Peso médio </td>
+            </tr>
+            <tr>
+                <td>Estilo inline</td>
+                <td>
+                    <a href="#">Inline<span><img src="img/inline.png"></span></a>
+                </td>
+                <td> Peso alto </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h2> Vamos falar mais um pouco sobre os calculos?</h2>
+
+    <p>
+    <div class="calculo">A pontuação é somada numa estrutura simples que começam com zeros (0), assim: 0,0,0,0. A
+        estrutura é composta por quatro números,
+        quanto mais o número estiver na esquerda, mais específico e mais força ele tem sobre outros seletores. Veja a
+        tabela a baixo:</div>
+    </p>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3"><b> Comprendendo a apontuação</b></th>
+            </tr>
+            <tr>
+                <th>Seletor</th>
+                <th>Pontuação</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>div ul li a</td>
+                <td>0,0,0,4</td>
+                <td>4 elementos, 4 pontos na primeira casa</td>
+            </tr>
+            <tr>
+                <td>div.content ul li</td>
+                <td>0,0,1,3</td>
+                <td>Uma classe vale um ponto na segunda casa. Mais 3 elementos, mais 3 pontos na primeira casa</td>
+            </tr>
+            <tr>
+                <td>a:hover></td>
+                <td>0,0,1,1</td>
+                <td>Um elemento, um ponto na primeira casa. Mais uma pseudo-classe, que equivale a uma classe e logo
+                    ganha um ponto na segunda casa.</td>
+            </tr>
+            <tr>
+                <td>div.menu a:hover</td>
+                <td>0,0,2,2</td>
+                <td>Dois elementos, dois pontos na primeira casa. Mais uma classe e uma pseudo-classe, mais dois pontos
+                    na segunda casa.</td>
+            </tr>
+            <tr>
+                <td>#content p</td>
+                <td>0,1,0,1</td>
+                <td>Um ID equivale a um ponto na terceira casa. Mais um elemento, que equivale a um ponto na primeira
+                    casa.</td>
+            </tr>
+            <tr>
+                <td>article#content p</td>
+                <td>0,1,0,2</td>
+                <td>Dois elementos, dois pontos na primeira casa. Um ID, um ponto na terceira casa.</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <h2>Feito por:</h2>
+
+    <div class="nome">
+        <p> <b>DESENVOLVIMENTO DE SISTEMAS - PWI </b><br>
+            EMILY DOS SANTOS CARDOSO<br>
+            JULYANE PEREIRA HENGLER
+        </p>
+    </div>
+
+
+    <br>
+    <h2> Bibliografia:
+        Para maiores informações acesse os links a seguir:</h2>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity"
+        target="_blank">https://developer.mozilla.org</a>
+    <a href="https://tableless.com.br/" target="_blank">https://tableless.com.br/</a>
+    <a href="https://www.todoespacoonline.com/w/2014/05/especificidade-css-2."
+        target="_blank">https://www.todoespacoonline.com/</a>
+    <a href="https://medium.com/emanuelg-blog/entendendo-a-preced%C3%AAncia-de-estilo-em-css-especificidade-heran%C3%A7ae-efeito-cascata-a437c4929173#:"
+        target="_blank">https://medium.com/emanuelg</a>
+    <a href="https://www.w3schools.com/css/css_specificity.asp" target="_blank">https://www.w3schools.com</a>
+
+</body>
+
+</html>

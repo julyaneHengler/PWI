@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Unidade Relativa - VW/VH</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #geral{
+            width: 60vw;
+            height: 70vh;
+            border: 0.1em solid silver;
+            padding: 1vw;
+            margin: 0 auto;
+        }
+        h1{
+            font-size: max(25px, 2.5vw);
+            text-align: center;
+            margin-bottom: 2vw;
+        }
+        p{
+            font-size: min(16px, 2vw);
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="geral">
+        <h1>Trabalhando com Viewport, Width e Height</h1>
+        <p>Muitas técnicas de web design responsivo dependem muito de regras percentuais. No entanto, medidas CSS
+            percentuais nem sempre são a melhor solução para todos os problemas. width em CSS é relativo ao
+            elemento-ancestal mais próximo.
+            Mas e se fosse preciso usar a largura ou a altura da viewport ao invés da largura do elemento-pai? Isso é
+            exatamente o que as unidades vh e vw proporcionam com CSS.
+            A medida vh é igual a 1/100 da altura da viewport. Então, por exemplo, se a altura do navegador é 900px, 1vh
+            equivale a 9px e, analogamente, se a largura da viewport é 750px, 1vw equivale a 7.5px.</p>
+    </div>
+    
+</body>
+</html>

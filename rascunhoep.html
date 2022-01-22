@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/rascunho.css">
+    <title>ESPECIFICIDADES</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>ESPECIFICIDADES</h1>
+            
+            <br>
+
+            <h2>O QUE É?</h2>
+            <p>
+                É a maneira que o browser utiliza para aplicar um estilo em um determinado elemento quando duas classes
+                entram em conflito,
+                por exemplo. A especificação é baseada apenas nas regras imposta na composição de diferentes tipos de
+                seletores.
+            </p>
+            
+            <br>
+
+            <h3>COMO É CALCULADO?</h3>
+            <p>
+                É calculado na concatenação da contagem de cada tipo de seletor. Não é um peso aplicado na expressão
+                correspondente. Cada seletor
+                tem um determinado peso e, quando um elemento tem estilos que se conflitam, o navegador aplica o estilo
+                que ganha em especificidade.
+            </p>
+            
+            <br>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3">Tipos de Seletores</th>
+                    </tr>
+                    <tr>
+                        <th>Seletores</th>
+                        <th>Exemplos</th>
+                        <th>Peso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Seletores de tipo</td>
+                        <td>
+                            <a href="#">P<span><img src="img/tag p.png" alt="tagP"></span></a>
+                            
+                        </td>
+                        <td> Peso mais baixo </td>
+                    </tr>
+                    <tr>
+                        <td>Pseudo-Elementos</td>
+                        <td>
+                            <a href="#">::first-letter<span><img src="img/firstletter.gif" alt="first-letter"></span></a> 
+                        </td>
+                        <td> Peso mais baixo </td>
+                    </tr>
+                    <tr>
+                        <td> Seletores de Classes </td>
+                        <td>
+                            <a href="#">Class<span><img src="img/class.gif" alt="class"></span></a>
+                        </td>
+                        <td> Peso baixo </td>
+                    </tr>
+                    <tr>
+                        <td>Seletores de Atributo</td>
+                        <td> 
+                            <a href="#">type= number<span><img src="img/atributo.png" alt="atributo"></span></a>
+                         </td>
+                        <td> Peso baixo </td>
+                    </tr>
+                    <tr>
+                        <td>Pseudo-Classes</td>
+                        <td>
+                            <a href="#">:hover<span><img src="img/hover.gif" alt="hover"></span></a> 
+                        </td>
+                        <td> Peso baixo </td>
+                    </tr>
+                    <tr>
+                        <td> Seletores de ID </td>
+                        <td>
+                            <a href="#">id<span><img src="img/id.gif"></span></a>
+                        </td>
+                        <td> Peso médio </td>
+                    </tr>
+                    <tr>
+                        <td>Estilo inline</td>
+                        <td>
+                            <a href="#">Inline<span><img src="img/inline.png"></span></a>
+                        </td>
+                        <td>  Peso alto </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <ul>
+                <li><b>Peso mais baixo:</b> Seletores de tipo e pseudo elementos;</li><br>
+                <li><b>Peso baixo:</b> Classe, atributo e pesudo-classes;</li><br>
+                <li><b>Peso médio:</b> Seletores de ID;</li><br>
+                <li><b>Peso alto:</b> Estilos inline.</li><br>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+</html>
